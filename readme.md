@@ -7,7 +7,7 @@ to mock C files for unit test.
 ## Prerequisites
 
 1. [CMake](https://cmake.org/)
-2. GNU C compiler
+2. GNU C/C++ compiler
 
 
 ## Directory Structure
