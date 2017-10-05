@@ -1,0 +1,18 @@
+language: c
+
+compiler:
+  - clang
+  - gcc
+
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+  - make test
+
+before_install:
+  # Print versions we use
+  - gcc --version
+  - clang --version
+
