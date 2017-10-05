@@ -47,4 +47,4 @@ cpputest_example
 5. [Introduction to CMake by Example | derekmolloy.ie](http://derekmolloy.ie/hello-world-introductions-to-cmake/)
 
 
-[![Build Status](https://travis-ci.org/maxpeng/umock_c_example.svg?branch=master)](https://travis-ci.org/maxpeng/cpputest_example)
+[![Build Status](https://travis-ci.org/maxpeng/cpputest_example.svg?branch=master)](https://travis-ci.org/maxpeng/cpputest_example)

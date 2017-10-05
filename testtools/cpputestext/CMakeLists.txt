@@ -42,8 +42,8 @@ add_library(CppUTestExt STATIC ${CppUTestExt_src} ${CppUTestExt_headers})
 
 target_include_directories(CppUTestExt
     PUBLIC
-    ${CMAKE_CURRENT_LIST_DIR}
-    ${CMAKE_CURRENT_LIST_DIR}/../CppUTest
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/../cpputest>
 )
 
 # this is the include directory
