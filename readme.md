@@ -14,27 +14,27 @@ to mock C files for unit test.
 
 ```
 cpputest_example
-├── CMakeLists.txt           --> main cmake configuration files
+├── CMakeLists.txt           --> main cmake configuration file
 ├── LICENSE
 ├── readme.md
 ├── src                      --> pythagorean example
 │   ├── CMakeLists.txt
 │   ├── main.c
-│   ├── pythagorean.c
+│   ├── pythagorean.c        --> unit under test
 │   ├── pythagorean.h
 │   ├── square_root.c        --> dependency of pythagorean.c
 │   └── square_root.h
 ├── tests                    --> unit test against pythagorean.c
 │   ├── CMakeLists.txt
-│   └── pythagorean_ut       --> unit test by CppUTest and CppUMock
+│   └── pythagorean_ut       --> unit test using CppUTest and CppUMock
 │       ├── CMakeLists.txt
 │       ├── main.cpp
 │       ├── pythagorean_ut.cpp
 │       └── square_root_mock.cpp
-└── testtools                --> unit test tools
+└── testtools                --> unit test tools, will be built as libraries.
     ├── CMakeLists.txt
     ├── cpputest             --> cpputest library 
-    └── cpputestext          --> cpputestext library which provide mocking support
+    └── cpputestext          --> cpputestext library which provides mocking support
 ```
     
     
