@@ -12,7 +12,7 @@ script:
   - make test
 
 before_install:
-  # Print versions we use
+  # Print used compiler versions.
   - gcc --version
   - clang --version
 
