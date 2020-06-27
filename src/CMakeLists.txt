@@ -10,3 +10,4 @@ add_executable(cpputest_example_pythagorean ${SOURCE_FILES})
 
 # link against math library.
 target_link_libraries(cpputest_example_pythagorean m)
+install(TARGETS cpputest_example_pythagorean DESTINATION bin)
