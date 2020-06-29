@@ -36,7 +36,7 @@ TEST(Pythagorean, simpleTest)
 }
 
 
-TEST(Pythagorean, blindTest)
+TEST(Pythagorean, BlackBoxTest)
 {
     // arrange
     mock().expectOneCall("SquareRoot_sqrt")
