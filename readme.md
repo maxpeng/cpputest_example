@@ -23,17 +23,16 @@ cpputest_example
 │   ├── pythagorean.h
 │   ├── square_root.c        --> dependency of pythagorean.c
 │   └── square_root.h
-├── tests                    --> unit test against pythagorean.c
-│   ├── CMakeLists.txt
-│   └── pythagorean_ut       --> unit test using CppUTest and CppUMock
-│       ├── CMakeLists.txt
-│       ├── main.cpp
-│       ├── pythagorean_ut.cpp
-│       └── square_root_mock.cpp
-└── testtools                --> unit test tools, will be built as libraries.
-    ├── CMakeLists.txt
-    ├── cpputest             --> cpputest library 
-    └── cpputestext          --> cpputestext library which provides mocking support
+└── tests                              --> unit test against pythagorean.c
+    ├── CMakeLists.txt
+    ├── cpputest_common.cmake
+    ├── cpputest_external_proj.cmake   --> cmake configuration file to build CppUTest and CppUMock
+    │                                      as an external project.
+    └── pythagorean_ut                 --> unit test using CppUTest and CppUMock
+        ├── CMakeLists.txt
+        ├── main.cpp
+        ├── pythagorean_ut.cpp
+        └── square_root_mock.cpp
 ```
 
 ## Unit Test
@@ -112,11 +111,10 @@ TEST(Pythagorean, BlackBoxTest)
 -- Generating done
 -- Build files have been written to: /home/max/cpputest_example/build
 ~/cpputest_example (master)$ ls
-CMakeLists.txt  LICENSE  build  readme.md  src  tests  testtools
-max@p50:~/cpputest_example (master)$ cd build
-max@p50:~/cpputest_example/build (master)$ make
+CMakeLists.txt  LICENSE  build  readme.md  src  tests
+~/cpputest_example (master)$ cd build
+~/cpputest_example/build (master)$ make
 Scanning dependencies of target CppUTest
-[  2%] Building CXX object testtools/cpputest/CMakeFiles/CppUTest.dir/CommandLineArguments.cpp.o
 ...
 ...
 ...
