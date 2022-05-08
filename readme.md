@@ -157,5 +157,3 @@ Total Test time (real) =   0.15 sec
 3. [CMake Tutorial - JohnLamp.netJohnLamp.net](https://www.johnlamp.net/cmake-tutorial.html)
 4. [CMake Tutorial | CMake](https://cmake.org/cmake-tutorial/)
 5. [Introduction to CMake by Example | derekmolloy.ie](http://derekmolloy.ie/hello-world-introductions-to-cmake/)
-
-[![Build Status](https://travis-ci.org/maxpeng/cpputest_example.svg?branch=master)](https://travis-ci.org/maxpeng/cpputest_example)
