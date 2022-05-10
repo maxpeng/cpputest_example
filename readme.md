@@ -53,10 +53,10 @@ We want to test `Pythagorean_hypotenuse(x, y)` function provided by `pythagorean
 TEST(Pythagorean, simpleTest)
 {
     // arrange
-    mock().expectOneCall("SquareRoot_sqrt")
-          .withParameter("number", 25.0)   // bubble 2 - expect the number is passed as 25.0.
-                                           // because 4.0^2 + 5.0^2 is 25.0.
-          .andReturnValue(5.0f);           // bubble 3 - return the result as 5.0f.
+    mock().expectOneCall("SquareRoot_sqrt")// expect Pythagorean_hypotenuse(...) call SquareRoot_sqrt(...).
+          .withParameter("number", 25.0)   // bubble 2 - expect the number is passed as 25.0,
+                                           // because 3.0^2 + 4.0^2 is 25.0.
+          .andReturnValue(5.0f);           // bubble 3 - return the result as 5.0f,
                                            // because square root of 25.0 is 5.0.
 
     // act
@@ -74,7 +74,7 @@ TEST(Pythagorean, simpleTest)
 TEST(Pythagorean, BlackBoxTest)
 {
     // arrange
-    mock().expectOneCall("SquareRoot_sqrt")
+    mock().expectOneCall("SquareRoot_sqrt")// expect Pythagorean_hypotenuse(...) call SquareRoot_sqrt(...).
           .withParameter("number", 100.0)  // bubble 2 - expect the number is passed as 100.
                                            // because 6.0^2 + 8.0^2 is 100.0.
           .andReturnValue(100.0f);         // bubble 3 - intentionally set the result as 100.0 instead of 10.0.
