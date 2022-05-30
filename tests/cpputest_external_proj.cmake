@@ -6,7 +6,8 @@ include(ExternalProject)
 ExternalProject_Add(cpputest
     GIT_REPOSITORY https://github.com/cpputest/cpputest.git
     GIT_TAG v4.0
-    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${EXTERNAL_INSTALL_LOCATION}
+    INSTALL_DIR ${EXTERNAL_INSTALL_LOCATION}
+    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=<INSTALL_DIR>
 )
 
 # add the installed cpputest and cppumock include directories to those the
